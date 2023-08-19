@@ -1,0 +1,111 @@
+ext{
+
+    kotlin_version="1.8.0"
+    kotlinDependencies=[
+            core:"androidx.core:core-ktx:${kotlin_version}"
+    ]
+    androidx_version="1.6.1"
+    androidxDependencies=[
+            core:"androidx.appcompat:appcompat:${androidx_version}"
+    ]
+    material_version="1.9.0"
+    materialDependencies=[
+            core:"com.google.android.material:material:${material_version}"
+    ]
+    constraint_version="2.1.4"
+    constraintDependencies=[
+
+            core:"androidx.constraintlayout:constraintlayout:${constraint_version}"
+    ]
+
+    retrofit_version="2.9.0"
+    retrofitDependencies=[
+            retrofit:"com.squareup.retrofit2:retrofit:${retrofit_version}",
+            gson:"com.squareup.retrofit2:converter-gson:${retrofit_version}",
+            scalar:"com.squareup.retrofit2:converter-scalars:${retrofit_version}",
+    ]
+
+    httpOk_version="4.10.0"
+    httpOkDependencies=[
+            httpOK:"com.squareup.okhttp3:logging-interceptor:${httpOk_version}"
+    ]
+
+
+    lifecycle_version = "2.6.1"
+    lifecycleDependencies=[
+            viewModel:"androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_version}",
+            liveData:"androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle_version}"
+    ]
+
+
+    hilt_version="2.44"
+    hiltDependencies=[
+
+            core:"com.google.dagger:hilt-android:$hilt_version",
+            kkk:"com.google.dagger:hilt-android-compiler:$hilt_version"
+    ]
+
+    nav_version="2.5.1"
+    navDependencies=[
+
+            fragment:"androidx.navigation:navigation-fragment-ktx:$nav_version",
+            ui:"androidx.navigation:navigation-ui-ktx:$nav_version",
+            // Feature module Support
+            dynamicFeatures:"androidx.navigation:navigation-dynamic-features-fragment:$nav_version",
+            // Testing Navigation
+            testing:"androidx.navigation:navigation-testing:$nav_version"
+    ]
+
+
+    glide_version="4.13.2"
+    glideDependencies=[
+            glide:"com.github.bumptech.glide:glide:${glide_version}",
+            annotation:"com.github.bumptech.glide:compiler:${glide_version}"
+    ]
+
+    materialComponent_version="1.4.0"
+    materialDepdencies=[
+            material:"com.google.android.material:material:${materialComponent_version}"
+    ]
+
+
+    prefences_version="1.2.0"
+    prefencesDependencies=[
+            core:"androidx.preference:preference:${prefences_version}"
+    ]
+
+
+    junit_version="4.13.2"
+    juintDependencies=[
+            core:"junit:junit:${junit_version}"
+    ]
+    google_truth_version="1.1.2"
+    googleTruthDependencies=[
+            core:"com.google.truth:truth:${google_truth_version}"
+    ]
+    test_version="1.1.3"
+    testDependencies=[
+            core:"androidx.test.ext:junit:${test_version}"
+    ]
+
+    espresso_version="3.5.1"
+    espressoDependencies=[
+            core:"androidx.test.espresso:espresso-core:${espresso_version}"
+    ]
+
+
+
+    room_version="2.5.1"
+    roomDependencies=[
+            runtime:"androidx.room:room-runtime:${room_version}",
+            compiler:"androidx.room:room-compiler:${room_version}",
+            kotlin:"androidx.room:room-ktx:${room_version}",
+            paging:"androidx.room:room-paging:${room_version}"
+    ]
+
+    custom_toast_version="7.2.4"
+    customToastDependencies=[
+            core:"com.github.tapadoo:alerter:${custom_toast_version}"
+    ]
+
+}

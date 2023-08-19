@@ -1,0 +1,97 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+
+
+}
+apply from: '../dependencies.gradle'
+android {
+    namespace 'com.blackstoneit.weatherforecasting'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.blackstoneit.weatherforecasting"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+
+
+}
+
+
+
+dependencies {
+
+    implementation kotlinDependencies.core
+    implementation androidxDependencies.core
+    implementation materialDependencies.core
+    implementation constraintDependencies.core
+    //retrofit
+    implementation retrofitDependencies.retrofit
+    implementation retrofitDependencies.gson
+    implementation retrofitDependencies.scalar
+    //
+    implementation httpOkDependencies.httpOK
+    //lifeCycle
+    implementation lifecycleDependencies.viewModel
+    implementation lifecycleDependencies.liveData
+    //glide
+    implementation glideDependencies.glide
+    implementation glideDependencies.annotation
+    //hilt
+    /*implementation hiltDependencies.core
+    kapt hiltDependencies.kkk*/
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-android-compiler:2.44"
+
+    //Navigation
+    implementation navDependencies.fragment
+    implementation navDependencies.ui
+    implementation navDependencies.dynamicFeatures
+    implementation navDependencies.testing
+    //custom toast
+    implementation customToastDependencies.core
+
+    //test
+    testImplementation juintDependencies.core
+    testImplementation googleTruthDependencies.core
+
+    androidTestImplementation testDependencies.core
+    androidTestImplementation espressoDependencies.core
+
+
+}

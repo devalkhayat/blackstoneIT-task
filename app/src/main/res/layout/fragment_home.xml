@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.home.ui.fragments.HomeFragment"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp">
+
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/mainContainer"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <TextView
+           android:id="@+id/tvCity"
+           style="@style/lblCity"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:drawablePadding="8dp"
+           app:drawableEndCompat="@android:drawable/arrow_down_float"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           tools:text="NEW YORK" />
+
+       <TextView
+           android:id="@+id/tvDegree"
+           style="@style/lblDegree"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/tvCity"
+           tools:text="23" />
+
+
+       <TextView
+           android:id="@+id/tvStatus"
+           style="@style/lblDescription"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/tvDegree"
+           tools:text="Clearly" />
+
+       <TextView
+           android:id="@+id/tvMaxMinDegree"
+           style="@style/lblDescription"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+           tools:text="22/14" />
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rvRestOfWeek"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="24dp"
+           android:background="@drawable/bg_gradient_light"
+           app:layout_constraintTop_toBottomOf="@+id/tvMaxMinDegree" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
+        android:visibility="gone"
+        android:theme="@style/progressBarBlue"
+        />
+
+</FrameLayout>

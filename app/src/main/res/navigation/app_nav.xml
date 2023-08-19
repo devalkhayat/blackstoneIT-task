@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.blackstoneit.weatherforecasting.features.home.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/toCityChooserFragment"
+            app:destination="@id/cityChooserFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/cityChooserFragment"
+        android:name="com.blackstoneit.weatherforecasting.features.home.ui.fragments.CityChooserFragment"
+        android:label="fragment_city_chooser"
+        tools:layout="@layout/fragment_city_chooser" >
+        <argument
+            android:name="onItemClickListener"
+            app:argType="com.blackstoneit.weatherforecasting.util.eventListners.RecycleViewEventListener" />
+    </dialog>
+</navigation>
